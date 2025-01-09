@@ -41,15 +41,14 @@ pipeline {
     }
 
     post {
-        // always {
-        //     junit "jenkins/learn-jenkins-app-main/test-results/junit.xml"
+        always {
+            junit "jenkins/learn-jenkins-app-main/test-results/junit.xml"
+        }
+        // success {
+        //     sh 'ls -la'
         // }
-        success {
-            sh 'ls -la'
-            sh 'rm package-lock.json'
-        }
-        failure {
-            echo "This will run only if failed"
-        }
+        // failure {
+        //     echo "This will run only if failed"
+        // }
     }
 }
