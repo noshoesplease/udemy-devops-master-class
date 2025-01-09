@@ -20,22 +20,5 @@ pipeline {
                 '''
             }
         }
-        // stage('w/o Docker') {
-        //     steps {
-        //         sh "echo 'Without Docker'"
-        //     }
-        // }
-        
-        // stage('w/ Docker') {
-        //     agent {
-        //         docker {
-        //             image "node:18-alpine"
-        //             reuseNode true
-        //         }
-        //     }
-        //     steps {
-        //         sh "echo 'With Docker'"
-        //     }
-        // }
     }
 }
