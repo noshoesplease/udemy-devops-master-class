@@ -46,6 +46,7 @@ pipeline {
         // }
         success {
             sh 'ls -la'
+            sh 'rm package-lock.json'
         }
         failure {
             echo "This will run only if failed"
