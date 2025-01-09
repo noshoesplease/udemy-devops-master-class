@@ -39,4 +39,16 @@ pipeline {
             }
         }
     }
+
+    post {
+        // always {
+        //     junit "jenkins/learn-jenkins-app-main/test-results/junit.xml"
+        // }
+        success {
+            sh 'ls -la'
+        }
+        failure {
+            echo "This will run only if failed"
+        }
+    }
 }
