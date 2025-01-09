@@ -2,6 +2,7 @@ pipeline {
     agent any
 
     stages {
+        
         stage("Build") {
             agent {
                 docker {
@@ -11,6 +12,7 @@ pipeline {
             }
             steps {
                 sh '''
+                cd jenkins/learn-jenkins-app-main
                 ls -la
                 node --version
                 npm --version
